@@ -4,8 +4,8 @@ Algoritmo TP3_E1
 	Escribir "ingresar 2 numeros reales distintos de 0"
 	Leer num_1,num_2
 	Si (num_1<0&num_2>0)|(num_1>0&num_2<0) Entonces
-		Escribir "no tienen el mismo signo"
+		Escribir "producto negativo"
 	SiNo
-		Escribir "tienen el mismo signo"
+		Escribir "producto positivo"
 	FinSi
 FinAlgoritmo
