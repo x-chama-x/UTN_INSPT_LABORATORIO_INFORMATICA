@@ -7,11 +7,10 @@ Algoritmo TP3_E19
 	Si horas <= 40 Entonces
 		salario = 16*horas
 		Escribir "salario semanal:$",salario
-	FinSi
-	Si horas >= 40 Entonces
+	SiNo 
 		salario = (16*40) + (horas - 40)*20
 		Escribir "salario semanal:$",salario
-	FinSi
+	FinSi	
 FinAlgoritmo 
 
 
