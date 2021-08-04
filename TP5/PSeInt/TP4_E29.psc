@@ -74,4 +74,10 @@ Algoritmo TP4_E29
 		acum <- acum + 0.10 * cant
 		Escribir cant," moneda/s de 0.10 pesos"
 	FinSi
+	cant <- trunc (importe/0.05)
+	Si cant <> 0 & acum <> impBkp Entonces
+		importe <- importe - 0.05 * cant
+		acum <- acum + 0.05 * cant
+		Escribir cant," moneda/s de 0.05 pesos"
+	FinSi
 FinAlgoritmo
