@@ -1,26 +1,30 @@
 Algoritmo TP4_E24
-	Definir n,q Como Entero
-	Definir r Como Real
-	Definir m Como Real
-	Escribir "ingrese un valor entero"
-	Leer n
-	Escribir "ingrese la cantidad de numeros reales a ingresar"
-	Leer q
-	Para i<-1 Hasta q Con Paso 1 Hacer
-		Escribir "ingrese un valor real"
-		Leer r
-		Si r>n & i = 1 Entonces
-			m <- n
+	Definir c,i Como Entero
+	Definir b Como Logico
+	Definir r,r1 Como Real
+	b <- Falso
+	Repetir
+		Escribir "ingrese la cantidad de numeros reales a ingresar"
+		Leer c
+		Si c <= 0 Entonces
+			Escribir "valor no valido" 
+			b <- Verdadero
 		SiNo
-			Si r<n & i = 1 Entonces
-				m <- r
+			b <- Falso
+		FinSi
+	Hasta Que b = Falso
+	Para i<-1 Hasta c Con Paso 1 Hacer
+		Escribir "ingrese un numero real"
+		Leer r
+		Si i = 1 Entonces
+			r1<-r
+		SiNo
+			Si r<r1 Entonces
+				r1<-r
 			FinSi
 		FinSi
-		Si r<m Entonces
-			m <- r
-		FinSi
 	Fin Para
-	Escribir "el menor valor ingresado es: ",m
+	Escribir "el num. menor será: ",r1
 FinAlgoritmo
 
 
