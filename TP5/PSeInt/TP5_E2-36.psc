@@ -80,6 +80,8 @@ Algoritmo TP5_E2_36
 	Si cant90 > 0 Entonces
 		Escribir "hay hombres mayores a 90 años"
 		Escribir "cantidad: ",cant90
+	SiNo
+		Escribir "no hay hombres de mas de 90 años de edad"
 	FinSi
 	Escribir "mujer más joven: ",legFJoven
 	Escribir "edad promedio de los hombres: ",edadMProm
