@@ -1,7 +1,7 @@
 Algoritmo GENERALA
 	Definir eleccion,backup Como Entero
 	Definir boolean Como Logico
-	Definir elecJug,dado Como Caracter
+	Definir dado Como Caracter
 	Dimension V_jugadores[5]
 	Dimension V_backup[1]
 	Dimension num[5]
@@ -104,7 +104,7 @@ Algoritmo GENERALA
 				Fin Para
 			Fin Para
 			
-			Para p<-1 Hasta cantJug Con Paso 1 Hacer
+			Para p<-1 Hasta 3 Con Paso 1 Hacer
 				Escribir V_jugadores[p]
 			Fin Para
 		FinSi
