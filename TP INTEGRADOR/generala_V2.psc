@@ -1,10 +1,9 @@
 Algoritmo GENERALA
-	Definir eleccion,backup Como Entero
+	Definir eleccion,numBackup Como Entero
 	Definir boolean Como Logico
-	Definir dado Como Caracter
-	Dimension V_jugadores[5]
-	Dimension V_backup[1]
-	Dimension num[5]
+	Definir dado,jugadoresBackup Como Caracter
+	Dimension V_jugadores[3]
+	Dimension num[3]
 	boolean <- Falso
 	
 	//Repetir
@@ -64,46 +63,30 @@ Algoritmo GENERALA
 					j <- j-1
 				FinSi
 			Fin Para
-			Para k<-1 Hasta cantJug Con Paso 1 Hacer
-				Para l<-2 Hasta cantJug Con Paso 1 Hacer
-					Si num[l]>num[k] Entonces
-						backup<-num[k]
-						V_backup[1]<-V_jugadores[k]
-						num[k]<-num[l]
-						V_jugadores[k]<-V_jugadores[l]
-						V_jugadores[l]<-V_backup[1]
-						num[l]<-backup
-						Para m<-3 Hasta cantJug Con Paso 1 Hacer
-							Si num[l]>num[m] Entonces
-								backup<-num[m]
-								V_backup[1]<-V_jugadores[m]
-								num[m]<-num[l]
-								V_jugadores[m]<-V_jugadores[l]
-								V_jugadores[l]<-V_backup[1]
-								num[l]<-backup
-							SiNo
-								Si num[l]<num[m] Entonces
-									backup<-num[m]
-									V_backup[1]<-V_jugadores[m]
-									num[m]<-num[l]
-									V_jugadores[m]<-V_jugadores[l]
-									V_jugadores[l]<-V_backup[1]
-									num[l]<-backup
-									Si num[l]>num[k] Entonces
-										backup<-num[k]
-										V_backup[1]<-V_jugadores[k]
-										num[k]<-num[l]
-										V_jugadores[k]<-V_jugadores[l]
-										V_jugadores[l]<-V_backup[1]
-										num[l]<-backup
-									FinSi
-								FinSi
-							FinSi
-						Fin Para
+			Si num[2]>num[1] Entonces
+				numBackup<-num[1]
+				jugadoresBackup<-V_jugadores[1]
+				num[1]<-num[2]
+				V_jugadores[1]<-V_jugadores[2]
+				num[2]<-numBackup
+				V_jugadores[2]<-jugadoresBackup
+				Si num[3]>num[2] Entonces
+					numBackup<-num[2]
+					jugadoresBackup<-V_jugadores[2]
+					num[2]<-num[3]
+					V_jugadores[2]<-V_jugadores[3]
+					num[3]<-numBackup
+					V_jugadores[3]<-jugadoresBackup
+					Si num[2]>num[1] Entonces
+						numBackup<-num[1]
+						jugadoresBackup<-V_jugadores[1]
+						num[1]<-num[2]
+						V_jugadores[1]<-V_jugadores[2]
+						num[2]<-numBackup
+						V_jugadores[2]<-jugadoresBackup
 					FinSi
-				Fin Para
-			Fin Para
-			
+				FinSi
+			FinSi
 			Para p<-1 Hasta 3 Con Paso 1 Hacer
 				Escribir V_jugadores[p]
 			Fin Para
