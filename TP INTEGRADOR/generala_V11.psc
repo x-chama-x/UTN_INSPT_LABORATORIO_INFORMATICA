@@ -142,13 +142,28 @@ Algoritmo GENERALA
 				Escribir "lance los dados (ingrese D)"
 				Leer dado
 				Si dado = 'D' Entonces
-					Para f<-1 Hasta cantDados Con Paso 1 Hacer
-						VD[f]<-Aleatorio(1,6)
-						Si VD_backup[f] <> 0 Entonces
-							VD[f] <- VD_backup[f]
-						FinSi
-						Escribir "dado ",f,": ", VD[f]
-					Fin Para
+					Si boolean2 = Verdadero Entonces
+						Escribir "dados lanzados:"
+						Para f<-1 Hasta cantDados Con Paso 1 Hacer
+							Si VD[f] <> VD_backup[f] Entonces
+								Escribir "dado ",f,": ", VD[f]
+							FinSi
+						Fin Para
+						Escribir "dados almacenados:"
+						Para f<-1 Hasta cantDados Con Paso 1 Hacer
+							Si VD[f] = VD_backup[f] Entonces
+								Escribir "dado ",f,": ", VD[f]
+							FinSi
+						Fin Para
+					SiNo
+						Para f<-1 Hasta cantDados Con Paso 1 Hacer
+							VD[f]<-Aleatorio(1,6)
+							Si VD_backup[f] <> 0 Entonces
+								VD[f] <- VD_backup[f]
+							FinSi
+							Escribir "dado ",f,": ", VD[f]
+						Fin Para
+					FinSi
 					//CATEGORIAS SERVIDAS
 					// ESCALERA SERVIDA
 					Si VD[1] <> VD[2] & VD[1]<>VD[3] & VD[1] <> VD[4] & VD[1]<>VD[5] & VD[2]<>VD[3] & VD[2] <> VD[4] & VD[2]<>VD[5] & VD[3]<>VD[1] & VD[3] <> VD[4] & VD[3]<>VD[5] & VD[4]<>VD[1] & VD[4]<>VD[2] & VD[4] <> VD[5] & VD[5]<>VD[1] & VD[5]<>VD[2] & VD[5] <> VD[3]  Entonces
@@ -240,8 +255,6 @@ Algoritmo GENERALA
 												Para Z<-1 Hasta 5 Con Paso 1 Hacer
 													VD_backup[z]<-0
 												Fin Para
-												Borrar Pantalla
-												Esperar 1 segundo
 												cantDados <- 5
 												boolean2 <- Falso
 											FinSi
