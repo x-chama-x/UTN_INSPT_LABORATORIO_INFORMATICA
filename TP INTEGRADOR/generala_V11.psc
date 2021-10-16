@@ -182,11 +182,21 @@ Algoritmo GENERALA
 								Escribir "Escalera servida"
 								Escribir "jugador ",V_jugadores[t]," recibió 25 puntos"
 								u <- 3 //fin del turno
+								Para z<-1 Hasta 5 Con Paso 1 Hacer
+									VD_backup[z]<-0
+								Fin Para
+								cantDados <- 5
+								boolean2 <- Falso
 							SiNo
 								Si boolean2 = Falso Entonces
 									Escribir "Escalera"
 									Escribir "jugador ",V_jugadores[t]," recibió 20 puntos"
 									u <- 3 //fin del turno
+									Para z<-1 Hasta 5 Con Paso 1 Hacer
+										VD_backup[z]<-0
+									Fin Para
+									cantDados <- 5
+									boolean2 <- Falso
 								FinSi
 							FinSi
 						FinSi
@@ -198,11 +208,21 @@ Algoritmo GENERALA
 								Escribir "Full servido"	
 								Escribir "jugador ",V_jugadores[t]," recibió 35 puntos"
 								u <- 3 //fin del turno
+								Para z<-1 Hasta 5 Con Paso 1 Hacer
+									VD_backup[z]<-0
+								Fin Para
+								cantDados <- 5
+								boolean2 <- Falso
 							SiNo
 								Si boolean2 = Verdadero Entonces
 									Escribir "Full"	
 									Escribir "jugador ",V_jugadores[t]," recibió 30 puntos"
 									u <- 3 //fin del turno
+									Para z<-1 Hasta 5 Con Paso 1 Hacer
+										VD_backup[z]<-0
+									Fin Para
+									cantDados <- 5
+									boolean2 <- Falso
 								FinSi
 							FinSi
 						SiNo
@@ -212,11 +232,21 @@ Algoritmo GENERALA
 									Escribir "Poker servido"	
 									Escribir "jugador ",V_jugadores[t]," recibió 45 puntos"
 									u <- 3 //fin del turno
+									Para z<-1 Hasta 5 Con Paso 1 Hacer
+										VD_backup[z]<-0
+									Fin Para
+									cantDados <- 5
+									boolean2 <- Falso
 								SiNo
 									Si boolean2 = Verdadero Entonces
 										Escribir "Poker"	
 										Escribir "jugador ",V_jugadores[t]," recibió 40 puntos"
 										u <- 3 //fin del turno
+										Para z<-1 Hasta 5 Con Paso 1 Hacer
+											VD_backup[z]<-0
+										Fin Para
+										cantDados <- 5
+										boolean2 <- Falso
 									FinSi
 								FinSi
 								
@@ -227,11 +257,21 @@ Algoritmo GENERALA
 										Escribir "Generala servida"	
 										Escribir "jugador ",V_jugadores[t]," recibió 60 puntos"
 										u <- 3 //fin del turno
+										Para z<-1 Hasta 5 Con Paso 1 Hacer
+											VD_backup[z]<-0
+										Fin Para
+										cantDados <- 5
+										boolean2 <- Falso
 									SiNo
 										Si boolean2 = Verdadero Entonces
 											Escribir "Generala"	
 											Escribir "jugador ",V_jugadores[t]," recibió 50 puntos"
 											u <- 3 //fin del turno
+											Para z<-1 Hasta 5 Con Paso 1 Hacer
+												VD_backup[z]<-0
+											Fin Para
+											cantDados <- 5
+											boolean2 <- Falso
 										FinSi
 									FinSi
 								SiNo
@@ -273,7 +313,7 @@ Algoritmo GENERALA
 					FinSi
 				FinSi
 			Fin Para
-	Fin Para
+		Fin Para
 	Hasta Que boolean = Verdadero
 	//Hasta Que eleccion = 3
 FinAlgoritmo
