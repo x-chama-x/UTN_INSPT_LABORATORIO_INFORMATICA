@@ -146,6 +146,7 @@ Algoritmo GENERALA
 						Escribir "dados lanzados:"
 						Para f<-1 Hasta cantDados Con Paso 1 Hacer
 							Si VD[f] <> VD_backup[f] Entonces
+								VD[f]<-Aleatorio(1,6)
 								Escribir "dado ",f,": ", VD[f]
 							FinSi
 						Fin Para
@@ -252,13 +253,19 @@ Algoritmo GENERALA
 											cantDados <- 5
 										SiNo
 											Si cantDados = 0 Entonces
-												Para Z<-1 Hasta 5 Con Paso 1 Hacer
+												Para z<-1 Hasta 5 Con Paso 1 Hacer
 													VD_backup[z]<-0
 												Fin Para
 												cantDados <- 5
 												boolean2 <- Falso
 											FinSi
 										FinSi
+									SiNo
+										Para z<-1 Hasta 5 Con Paso 1 Hacer
+											VD_backup[z]<-0
+										Fin Para
+										cantDados <- 5
+										boolean2 <- Falso
 									FinSi
 								FinSi
 							FinSi
