@@ -158,12 +158,10 @@ Fin Funcion
 
 Funcion eleccion <- menu (x)  //menu principal
 	Escribir "Generala"
-	Escribir "reglas (ingrese 1)"
-	Escribir "iniciar juego (ingrese 2)"
-	Escribir "salir (ingrese 3)"
+	Escribir "iniciar juego (ingrese 1)"
+	Escribir "salir (ingrese 2)"
 	Leer eleccion
 Fin Funcion
-
 
 Algoritmo generala_game // entrar en las distintas opciones del programa
 	Definir bool Como Logico
@@ -172,10 +170,6 @@ Algoritmo generala_game // entrar en las distintas opciones del programa
 		opEleg<-menu(x); //opEleg -> opcion elegida
 		Segun opEleg Hacer
 			1:
-				Borrar Pantalla
-				Escribir "entro en reglas"
-				bool<-Falso
-			2:
 				Borrar Pantalla
 				bool<-Falso
 				nombre<-llamar_jugador(x);
@@ -195,7 +189,7 @@ Algoritmo generala_game // entrar en las distintas opciones del programa
 					FinSi
 				FinSi
 				
-			3:
+			2:
 				Borrar Pantalla
 				Escribir "saliendo..."
 				Esperar 1 Segundos
